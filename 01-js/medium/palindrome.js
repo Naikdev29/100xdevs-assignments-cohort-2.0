@@ -5,18 +5,17 @@
 
 function isPalindrome(str) {
   //solution
-  const lowerStr = str.toLowerCase().replace(/^[a-z0-9]/g,'');   
+  const cleanStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
   let left = 0;
-  let right = lowerStr.length - 1;
+  let right = cleanStr.length - 1;
 
-  while(right >= left){
-    if(lowerStr[left] !== lowerStr[right])
-    return false;
-  left++;
-  right--;
-  
+  while (right >= left) {
+    if (cleanStr[left] !== cleanStr[right])
+      return false;
+    left++;
+    right--;
   }
-  
+
   return true;
 }
 
