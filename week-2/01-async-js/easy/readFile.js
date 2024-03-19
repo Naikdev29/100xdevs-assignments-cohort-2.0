@@ -7,10 +7,16 @@ function expensiveOperation(numbers){
     console.log('Expensive operation completed');
 }
 
-fs.readFile('./easy/1-counter.md','utf-8',(err, data) =>{
+fs.readFile('readme.txt','utf-8',(err, data) =>{
     if(err){
         console.error('error reading the file:', err);
         return;
     }
-    console.log('File contents:', data);
+    console.log('text from file:', data);
+     
 });
+
+console.log('start itertions');
+expensiveOperation(1000000);
+
+console.log('this message is logged after initiating file read and expensive operations.');
