@@ -1,1 +1,1 @@
-hi thereHello world
+This is the content that will be written to the file.
